@@ -1,6 +1,8 @@
 import EventCard from "../components/EventCard";
 
 const Home = ({ events, onDelete, searchQuery }) => {
+
+
     // Group events by date by using accumulator
     const eventsByDate = events.reduce((acc, event) => {
         const date = event.date;

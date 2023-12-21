@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-const Navbar = ({ onSearch, clearSearch }) => {
-  const [searchQuery, setSearchQuery] = useState('');
+const Navbar = ({ onSearch, clearSearch, setSearchQuery, searchQuery }) => {
 
   const handleSearch = () => {
     onSearch(searchQuery);
@@ -20,9 +19,6 @@ const Navbar = ({ onSearch, clearSearch }) => {
           onChange={(e) => setSearchQuery(e.target.value)}
           className="rounded-pill"
         />
-        <button className="btn btn-primary" onClick={handleSearch}>
-          Search
-        </button>
       </div>
 
 

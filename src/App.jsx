@@ -73,7 +73,7 @@ function App() {
   }
   return (
     <div className='app-container'>
-      <Navbar className='navbar' onSearch={handleSearch} searchQuery={searchQuery} />
+      <Navbar className='navbar' onSearch={handleSearch} searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       <div className='main-container' >
         <div className='sidebar' >
         <Sidebar />
