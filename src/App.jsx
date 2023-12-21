@@ -1,5 +1,4 @@
 import CreateEvent from './pages/CreateEvent'
-import CategoryView from './pages/CategoryView'
 import EditEvent from './pages/EditEvent'
 import EventDetails from './pages/EventDetails'
 import Home from './pages/Home'
@@ -36,6 +35,7 @@ function App() {
   useEffect(() => {
     axios.get('https://server-event-planner.adaptable.app/events')
       .then((response) => {
+        console.log("this is app request:" , response)
         setEvents(response.data);
       })
       .catch((error) => {
@@ -82,7 +82,7 @@ function App() {
           <Routes >
             <Route path="/" element={<Home events={events} onDelete={handleDeleteEvent} searchQuery={searchQuery} clearSearch={clearSearch} />} />
             <Route path="/create" element={<CreateEvent eventFormData={eventFormData} setEventFormData={setEventFormData} onCreateEvent={handleCreateEvent} />} />
-            <Route path="/category" element={<CategoryView />} />
+            {/* <Route path="/category" element={<CategoryView />} /> */}
             <Route path="/:id" element={<EventDetails />} />
             <Route path="/:id/edit" element={<EditEvent updateEvent={handleUpdateEvent} />} />
           </Routes>
