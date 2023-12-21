@@ -21,7 +21,7 @@ const CreateEvent = ({ eventFormData, setEventFormData, onCreateEvent }) => {
 
         const newEvent = { ...eventFormData, id: generateUniqueId() };
 
-        axios.post('http://localhost:5005/events', newEvent)
+        axios.post('https://server-event-planner.adaptable.app/events', newEvent)
             .then((response) => {
                 console.log('Event added: ', response.data);
                 onCreateEvent(response.data);

@@ -34,7 +34,7 @@ function App() {
   };
 
   useEffect(() => {
-    axios.get('http://localhost:5005/events')
+    axios.get('https://server-event-planner.adaptable.app/events')
       .then((response) => {
         setEvents(response.data);
       })
@@ -44,7 +44,7 @@ function App() {
   }, []);
 
   const handleDeleteEvent = (eventId) => {
-    axios.delete(`http://localhost:5005/events/${eventId}`)
+    axios.delete(`https://server-event-planner.adaptable.app/events/${eventId}`)
       .then(() => {
         setEvents((prevEvents) => prevEvents.filter((event) => event.id !== eventId))
       })

@@ -7,7 +7,7 @@ const EventDetails = () => {
   const [event, setEvent] = useState({});
 
   useEffect(() => {
-    axios.get(`http://localhost:5005/events/${id}`)
+    axios.get(`https://server-event-planner.adaptable.app/events/${id}`)
       .then((response) => {
         setEvent(response.data);
       })

@@ -21,24 +21,7 @@ const Home = ({ events, onDelete, searchQuery }) => {
             event.name.toLowerCase().includes(searchQuery.toLowerCase())
         )
         : events;
-    // Map through date groups and events to render them
-    // return (
-    //     <div className="container">
-    //         <h1 className="row py-3" >Events:</h1>
-    //         {Object.keys(eventsByDate).map((date) => (
-    //             <div key={date}>
-    //                 <h2 className="border-bottom" >{date}</h2>
-    //                 <div>
-    //                     {eventsByDate[date].map((event) => (
-    //                         <div key={event.id} className="list-group-item">
-    //                             <EventCard event={event} onDelete={onDelete} />
-    //                         </div>
-    //                     ))}
-    //                 </div>
-    //             </div>
-    //         ))}
-    //     </div>
-    // );
+    
     return (
         <div className="container">
             <h1 className="row py-3">Events:</h1>

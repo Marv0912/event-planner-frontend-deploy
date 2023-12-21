@@ -9,7 +9,7 @@ const EditEvent = ({ updateEvent }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`http://localhost:5005/events/${id}`)
+    axios.get(`https://server-event-planner.adaptable.app/events/${id}`)
       .then((response) => {
         setEventData(response.data);
       })
@@ -29,7 +29,7 @@ const EditEvent = ({ updateEvent }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    axios.put(`http://localhost:5005/events/${id}`, eventData)
+    axios.put(`https://server-event-planner.adaptable.app/events/${id}`, eventData)
       .then((response) => {
         console.log("Event updated: ", response.data);
         updateEvent(response.data);
