@@ -1,0 +1,25 @@
+#root {
+
+  margin: 0 auto;
+  text-align: center;
+}
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.main-container {
+  display: flex;
+  flex: 1;
+  overflow-y: auto;
+  width: 100vw;
+}
+
+.main-page {
+  width: 100%;
+}
+
+.sidebar {
+  width: 15%;
+  height: 100%;
+}
